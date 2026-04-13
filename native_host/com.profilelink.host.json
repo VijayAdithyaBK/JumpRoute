@@ -1,0 +1,7 @@
+{
+  "name": "com.profilelink.host",
+  "description": "ProfileLink native messaging host - opens links in specified Chrome profile",
+  "path": "C:\\Users\\vijay\\Desktop\\Projects\\JumpRoute\\native_host\\host.bat",
+  "type": "stdio",
+  "allowed_origins": ["chrome-extension://mkmlecpconkelchmecoooghnclbgffai/"]
+}

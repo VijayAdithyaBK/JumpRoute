@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JumpRoute Settings</title>
+  <link rel="stylesheet" href="popup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-row">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="url(#grad1)" opacity="0.15"/>
+            <circle cx="8" cy="10" r="2.5" fill="url(#grad2)"/>
+            <circle cx="16" cy="10" r="2.5" fill="url(#grad3)"/>
+            <path d="M7 15c0 0 2 3 5 3s5-3 5-3" stroke="url(#grad2)" stroke-width="1.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="grad1" x1="2" y1="2" x2="22" y2="22">
+                <stop stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/>
+              </linearGradient>
+              <linearGradient id="grad2" x1="0" y1="0" x2="24" y2="24">
+                <stop stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/>
+              </linearGradient>
+              <linearGradient id="grad3" x1="0" y1="0" x2="24" y2="24">
+                <stop stop-color="#4facfe"/><stop offset="1" stop-color="#2193b0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 class="title">JumpRoute</h1>
+      </div>
+      <p class="subtitle">Redirect all links to another profile</p>
+    </header>
+
+    <!-- Master Toggle -->
+    <div class="toggle-card" id="toggle-card">
+      <div class="toggle-info">
+        <span class="toggle-label" id="toggle-label">Disabled</span>
+        <span class="toggle-hint">Click any link → opens in target profile</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="toggle-enabled" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Status Indicator -->
+    <div id="status-bar" class="status-bar">
+      <span class="status-dot" id="status-dot"></span>
+      <span class="status-text" id="status-text">Checking native host…</span>
+    </div>
+
+    <!-- Profile Selector -->
+    <section class="section">
+      <label class="label" for="profile-select">Target Profile</label>
+      <div class="select-wrapper">
+        <select id="profile-select" class="select" disabled>
+          <option value="">Detecting profiles…</option>
+        </select>
+        <div class="select-chevron">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="btn-refresh" class="btn btn-secondary" title="Re-detect profiles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M1 4v6h6M23 20v-6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Refresh
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>v2.0.0</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
