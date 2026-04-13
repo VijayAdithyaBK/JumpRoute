@@ -101,7 +101,7 @@ function handleOpen(msg) {
   try {
     const child = spawn(
       chromeExe,
-      ['--profile-directory=' + profile, '--new-window', url],
+      ['--profile-directory=' + profile, url],
       { detached: true, stdio: 'ignore' }
     );
     child.unref(); // let this process exit independently of node
