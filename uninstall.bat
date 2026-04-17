@@ -1,13 +1,13 @@
 @echo off
 :: ─────────────────────────────────────────────────────────────────
-::  ProfileLink – Uninstaller
+::  JumpRoute – Uninstaller
 ::  Removes the native messaging host registration from the registry.
 :: ─────────────────────────────────────────────────────────────────
 
 echo.
-echo  Uninstalling ProfileLink native host...
+echo  Uninstalling JumpRoute native host...
 
-set "HOST_NAME=com.profilelink.host"
+set "HOST_NAME=com.jumproute.host"
 
 reg delete "HKCU\SOFTWARE\Google\Chrome\NativeMessagingHosts\%HOST_NAME%" /f >nul 2>&1
 

@@ -1,4 +1,4 @@
-const NATIVE_HOST = 'com.profilelink.host';
+const NATIVE_HOST = 'com.jumproute.host';
 
 // ── Initialise ──────────────────────────────────────────────────
 

@@ -22,7 +22,7 @@ Under the hood, a content script captures click events, and a native messaging h
 
 1. Open `chrome://extensions` in Chrome.
 2. Enable **Developer mode** (top-right toggle).
-3. Click **Load unpacked** and select this `ProfileLinkExtension` folder.
+3. Click **Load unpacked** and select this `JumpRoute` folder.
 4. Note the **Extension ID** shown on the card.
 
 ### 2. Register the Native Host
@@ -54,7 +54,7 @@ The extension badge shows **"ON"** when active.
 ## File Structure
 
 ```
-ProfileLinkExtension/
+JumpRoute/
 ├── manifest.json          # Chrome extension manifest (MV3)
 ├── background.js          # Service worker (native messaging relay + badge)
 ├── content.js             # Intercepts link clicks when enabled
@@ -65,7 +65,7 @@ ProfileLinkExtension/
 ├── native_host/
 │   ├── host.js            # Node.js native messaging host
 │   ├── host.bat           # Generated wrapper (created by install.bat)
-│   └── com.profilelink.host.json  # Generated manifest (created by install.bat)
+│   └── com.jumproute.host.json  # Generated manifest (created by install.bat)
 ├── install.bat            # One-click installer
 ├── uninstall.bat          # One-click uninstaller
 └── README.md

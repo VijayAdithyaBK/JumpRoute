@@ -49,8 +49,8 @@ set "SCRIPT_DIR=%~dp0"
 set "HOST_DIR=%SCRIPT_DIR%native_host"
 set "HOST_JS=%HOST_DIR%\host.js"
 set "HOST_BAT=%HOST_DIR%\host.bat"
-set "MANIFEST=%HOST_DIR%\com.profilelink.host.json"
-set "HOST_NAME=com.profilelink.host"
+set "MANIFEST=%HOST_DIR%\com.jumproute.host.json"
+set "HOST_NAME=com.jumproute.host"
 
 :: ── Create host.bat (Node.js wrapper) ───────────────────────────
 
@@ -67,7 +67,7 @@ set "ESCAPED_BAT=%HOST_BAT:\=\\%"
 (
 echo {
 echo   "name": "%HOST_NAME%",
-echo   "description": "ProfileLink native messaging host - opens links in specified Chrome profile",
+echo   "description": "JumpRoute native messaging host - opens links in specified Chrome profile",
 echo   "path": "%ESCAPED_BAT%",
 echo   "type": "stdio",
 echo   "allowed_origins": ["chrome-extension://%EXT_ID%/"]

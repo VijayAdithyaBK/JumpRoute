@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+native_host/host_debug.log
+
+# Generated files (by install.bat)
+native_host/host.bat
+native_host/com.jumproute.host.json

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * ProfileLink – Native Messaging Host
+ * JumpRoute – Native Messaging Host
  *
  * Handles two actions:
  *   1. "open"          – Opens a URL in the specified Chrome profile.
